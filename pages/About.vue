@@ -82,6 +82,7 @@ export default {
     width: 100%;
     flex-wrap: wrap;
     margin-top: 50px;
+    max-width: 400px;
   }
   &__item {
     padding: 0 13px;
@@ -93,7 +94,7 @@ export default {
     &-body {
       border: 2px solid #f8f8f8;
       border-radius: 10px;
-      padding: 32px 22px;
+      padding: 32px 8px;
       display: flex;
       flex-direction: column;
       height: 100%;
