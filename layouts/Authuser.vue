@@ -83,7 +83,8 @@ export default {
   }
 }
 .footer {
-  padding: 30px 0px 50px;
+  max-height: 70px;
+  height: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
