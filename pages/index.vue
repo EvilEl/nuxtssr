@@ -1,45 +1,51 @@
 <template>
-  <div class="hero">
-    <div class="hero__container _container">
-      <div class="hero__images images-group">
-        <div class="hero__images-big hero__big images-group__big">
-          <img
-            class="hero__big-img images"
-            :src="require(`@/assets/images/main/${bigImage}.png`)"
-            alt="big"
-          />
-        </div>
-        <div class="hero__images-small hero__small images-group__small">
-          <img
-            class="hero__small-img images"
-            :src="require(`@/assets/images/main/${smallImage}.png`)"
-            alt="small"
-          />
-        </div>
-      </div>
-      <div class="hero__content">
-        <div class="hero__order subtitle">Book Now</div>
-        <h1 class="hero__title">
-          {{title}}
-          <span class="hero__title-icon">
+  <transition>
+    <div class="hero">
+      <div class="hero__container _container">
+        <div class="hero__images images-group">
+          <div class="hero__images-big hero__big images-group__big">
             <img
-              class="hero__title-image"
-              :src="require(`@/assets/images/main/${imageRocker}.png`)"
-              alt="rocket"
+              class="hero__big-img images"
+              :src="require(`@/assets/images/main/${bigImage}.png`)"
+              alt="big"
             />
-          </span>
-        </h1>
-        <div class="hero__descript">{{descript}}</div>
-        <Button class="hero__button" title="Start Now" />
+          </div>
+          <div class="hero__images-small hero__small images-group__small">
+            <img
+              class="hero__small-img images"
+              :src="require(`@/assets/images/main/${smallImage}.png`)"
+              alt="small"
+            />
+          </div>
+        </div>
+        <div class="hero__content">
+          <div class="hero__order subtitle">Book Now</div>
+          <h1 class="hero__title">
+            {{title}}
+            <span class="hero__title-icon">
+              <img
+                class="hero__title-image"
+                :src="require(`@/assets/images/main/${imageRocker}.png`)"
+                alt="rocket"
+              />
+            </span>
+          </h1>
+          <div class="hero__descript">{{descript}}</div>
+          <Button class="hero__button" title="Start Now" />
+        </div>
       </div>
     </div>
-  </div>
+  </transition>
 </template>
 
 <script>
 import Button from '@/components/Ui/Button'
 
 export default {
+  transition: {
+    name: 'hero',
+    mode: 'out-in',
+  },
   layout: 'Authuser',
   components: {
     Button,
@@ -58,6 +64,21 @@ export default {
 </script>
 
 <style lang="scss">
+.hero-enter {
+  transition: transform 0.5s;
+  transform: translateX(-2000px);
+}
+.hero-enter-to {
+  transition: transform 0.5s;
+  transform: translateX(0);
+}
+.hero-leave {
+  transform: translateX(0);
+}
+.hero-leave-to {
+  transform: translateX(2000px);
+  transition: transform 0.5s;
+}
 body,
 html {
   font-family: 'airb-book';

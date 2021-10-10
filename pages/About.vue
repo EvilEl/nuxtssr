@@ -1,41 +1,47 @@
 <template>
-  <div class="about">
-    <div class="about__container _container">
-      <div class="about__content">
-        <div class="about__order subtitle">About Us</div>
-        <h1 class="about__title title">{{title}}</h1>
-        <div class="about__descript decript">{{descript}}</div>
-        <div class="about__items">
-          <div class="about__item" v-for="(item) in features" :key="item.title">
-            <div class="about__item-body">
-              <div class="about__item-title">{{item.title}}</div>
-              <div class="about__item-descript">{{item.descript}}</div>
+  <transition>
+    <div class="about">
+      <div class="about__container _container">
+        <div class="about__content">
+          <div class="about__order subtitle">About Us</div>
+          <h1 class="about__title title">{{title}}</h1>
+          <div class="about__descript decript">{{descript}}</div>
+          <div class="about__items">
+            <div class="about__item" v-for="(item) in features" :key="item.title">
+              <div class="about__item-body">
+                <div class="about__item-title">{{item.title}}</div>
+                <div class="about__item-descript">{{item.descript}}</div>
+              </div>
             </div>
           </div>
         </div>
-      </div>
-      <div class="about__images images-group">
-        <div class="about__images-big about__big images-group__big">
-          <img
-            class="about__big-img images"
-            :src="require(`@/assets/images/about/${bigImage}.png`)"
-            alt="big"
-          />
-        </div>
-        <div class="about__images-small about__small images-group__small">
-          <img
-            class="about__small-img images"
-            :src="require(`@/assets/images/about/${smallImage}.png`)"
-            alt="small"
-          />
+        <div class="about__images images-group">
+          <div class="about__images-big about__big images-group__big">
+            <img
+              class="about__big-img images"
+              :src="require(`@/assets/images/about/${bigImage}.png`)"
+              alt="big"
+            />
+          </div>
+          <div class="about__images-small about__small images-group__small">
+            <img
+              class="about__small-img images"
+              :src="require(`@/assets/images/about/${smallImage}.png`)"
+              alt="small"
+            />
+          </div>
         </div>
       </div>
     </div>
-  </div>
+  </transition>
 </template>
 <script>
 export default {
   layout: 'Authuser',
+  transition: {
+    name: 'about',
+    mode: 'out-in',
+  },
   data() {
     return {
       features: [
@@ -66,6 +72,21 @@ export default {
 }
 </script>
 <style lang="scss">
+.about-enter {
+  transition: transform 0.5s;
+  transform: translateX(2000px);
+}
+.about-enter-to {
+  transition: transform 0.5s;
+  transform: translateX(0);
+}
+.about-leave {
+  transform: translateX(0);
+}
+.about-leave-to {
+  transform: translateX(-2000px);
+  transition: transform 0.5s;
+}
 .about {
   padding: 91px 0;
   &__container {
