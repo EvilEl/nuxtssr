@@ -8,7 +8,7 @@
 @font-face {
   font-family: 'airb-book';
   font-style: normal;
-  font-weight: 4000;
+  font-weight: 400;
   font-display: swap;
   src: url('@/assets/fonts/airbnb-cereal-app-cufonfonts/AirbnbCerealBook.ttf') format('truetype');
 }

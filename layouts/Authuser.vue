@@ -46,8 +46,8 @@ export default {
           link: '/About',
         },
         {
-          title: 'Packages',
-          link: '/Packages',
+          title: 'Location',
+          link: '/Location',
         },
         {
           title: 'Packages',

@@ -137,8 +137,7 @@ export default {
       flex: 1 1 auto;
     }
   }
-  &__title {
-  }
+
   &__images {
     max-width: 604px;
     width: 100%;

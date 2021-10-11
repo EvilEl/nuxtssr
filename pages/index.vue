@@ -112,8 +112,7 @@ html {
     width: 100%;
     margin-top: 85px;
   }
-  &__order {
-  }
+
   &__title {
     font-family: 'airb-medium';
     font-weight: 500;
