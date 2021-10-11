@@ -12,7 +12,7 @@
         <nav class="menu">
           <ul class="menu__list">
             <li class="menu__item" v-for="(item) in navItems" :key="item.name">
-              <nuxtLink class="menu__link" :to="item.link">{{item.title}}</nuxtLink>
+              <nuxtLink exact class="menu__link" :to="item.link">{{item.title}}</nuxtLink>
             </li>
           </ul>
         </nav>
@@ -99,6 +99,9 @@ export default {
   }
 }
 .menu {
+  .nuxt-link-active {
+    color: #3685fb;
+  }
   flex: 1 1 auto;
   &__list {
     display: flex;
