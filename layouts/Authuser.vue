@@ -72,6 +72,7 @@ export default {
   display: flex;
   flex-direction: column;
   height: 100vh;
+  overflow-y: scroll;
 }
 .main {
   flex: 1 1 auto;
