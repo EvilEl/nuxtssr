@@ -92,7 +92,7 @@ html {
   }
   &__images {
     position: relative;
-    max-width: 569px;
+    max-width: 500px;
     width: 100%;
     &-big {
       max-width: 400px;

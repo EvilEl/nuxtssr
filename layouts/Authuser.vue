@@ -50,8 +50,8 @@ export default {
           link: '/Location',
         },
         {
-          title: 'Packages',
-          link: '/Packages',
+          title: 'Find',
+          link: '/Find',
         },
         {
           title: 'FAQ',

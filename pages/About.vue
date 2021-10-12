@@ -139,7 +139,7 @@ export default {
   }
 
   &__images {
-    max-width: 604px;
+    max-width: 480px;
     width: 100%;
     position: relative;
     display: flex;

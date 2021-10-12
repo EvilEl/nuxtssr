@@ -16,9 +16,9 @@
             :key="item.title"
           >
             <div class="gallery-item__body">
-              <div class="gallery-item__image images">
+              <div class="gallery-item__image">
                 <img
-                  class="gallery-item__img"
+                  class="gallery-item__img images"
                   :src="require(`@/assets/images/Location/${item.image}`)"
                   alt="gallery1"
                 />
